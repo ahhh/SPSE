@@ -1,5 +1,5 @@
 #/usr/bin/python
-# Python program for playing around with working
+# Python program for playing around with forking
 import os, sys
 
 def child_process():
