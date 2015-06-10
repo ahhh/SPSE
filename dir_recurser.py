@@ -16,6 +16,6 @@ def dir_recurse(target_directory):
 if __name__ == '__main__':
   try:
     target_dir = sys.argv[1]
-    dir_recurse()
+    dir_recurse(target_dir)
   except IndexError:
     print "python dir_recurser.py [/full/path/of/target/dir]"
