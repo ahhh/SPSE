@@ -21,7 +21,7 @@ class ArpPoisonThread(threading.Thread):
   def __init__(delf, arp_response):
     threading.Thread.__init__(self)
     self.arp_response = arp_response
-    self.count = True
+    self.cont = True
 	
   def finish(self):
     self.cont = False
