@@ -32,7 +32,7 @@ def main():
                   const=5, default=logging.INFO)
 
   # Option for search query
-  optp.add_option("-t", "--query", dest="query",
+  optp.add_option("-g", "--query", dest="query",
                   help="The search query to send to DuckDuckGo")
 				  
   opts, args = optp.parse_args()
