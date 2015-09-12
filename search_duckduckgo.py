@@ -11,8 +11,8 @@ def searchDDG(query):
   data = site.read()
   parsed = BeautifulSoup(data)
   results = []
-  for i in parsed.findAll('div', {'class': re.compile('url')}):
-    results.append(i.text)	
+  for url in parsed.findAll('div', {'class': re.compile('url')}):
+    results.append(url.text)	
   return results
   
 # Main function with options for running script directly
