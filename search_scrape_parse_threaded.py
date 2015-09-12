@@ -37,7 +37,6 @@ class SearcherThread(threading.Thread):
   
 
 class ScraperThread(threading.Thread):
-
   def __init__(self, url_queue, out_queue):
     threading.Thread.__init__(self)
     self.url_queue = url_queue
@@ -75,13 +74,12 @@ class ParserThread(threading.Thread):
       try:
         # parse the chunk
         soup = BeautifulSoup(chunk)
-	    
-	    # Heres where you can scrape any data you want
+        # Heres where you can scrape any data you want
         print soup.find(['title']).text
-	    #print soup.find(['body'])
-	    #print soup.findAll('div', {'class': re.compile('content')})
+        #print soup.find(['body'])
+        #print soup.findAll('div', {'class': re.compile('content')})
       except:
-	    print '** parsing error'
+        print '** parsing error'
 
       # signals to queue job is done
       self.out_queue.task_done()
