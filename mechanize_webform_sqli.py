@@ -1,5 +1,5 @@
 #/bin/python
-# sqlisqlisqlisqlisqlisqlisqli
+# http://attack.samsclass.info/sqlol/search.htm
 import mechanize 
 import logging
 import time
