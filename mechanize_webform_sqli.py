@@ -25,7 +25,7 @@ def sqli(target, sqli_list):
     time.sleep(2)
     for field in br.form.controls:
       if field.type == "text":
-        br.form[field.name] = str("'")
+        br.form[field.name] = str(sqli)
     print br.form#"! injecting {0}, in the form {1}, on the page: {2}".format(str(sqli), str(br.form.name), str(target))
     request = br.click(type="submit")
     response = br.open(request)
