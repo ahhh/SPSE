@@ -77,7 +77,7 @@ def main():
     while True:
 	  print monitor.listen_SYN()
       max_number = max_number + 1
-      if max_number == int(opts.number) or (int(opts.timeout) != 0 and time.time() > timeout):
+      if (max_number == int(opts.number)) or (int(opts.timeout) != 0 and time.time() > timeout):
         break
 	
   except (KeyboardInterrupt, EOFError) as e:
