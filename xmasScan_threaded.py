@@ -34,7 +34,7 @@ class WorkerThread(threading.Thread):
           print "Port: {0} is {1}".format(port, "Open")
         elif response[TCP].flags == 1:					 # If we get a FIN response then our port is closed
           print "Port: {0} is {1}".format(port, "Closed")
-        elif (int(response[ICMP].type) == 3 and int(response[ICMP].code) in [1,2,3,9,10,13])  # Certain ICMP responses also indicate the port is filtered
+        elif ((int(response[ICMP].type) == 3) and (int(response[ICMP].code) in [1,2,3,9,10,13])):  # Certain ICMP responses also indicate the port is filtered
           print "Port: {0} is {1}".format(port, "Filtered") 
       self.queue.task_done()
       total_ports += 1
