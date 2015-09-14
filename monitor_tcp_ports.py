@@ -76,7 +76,7 @@ def main():
     monitor = monitor_TCP()
     while True:
 	  print monitor.listen_SYN()
-	  max_number = max_number + 1
+      max_number = max_number + 1
       if max_number == int(opts.number) or (int(opts.timeout) != 0 and time.time() > timeout):
         break
 	
