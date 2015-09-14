@@ -26,7 +26,7 @@ class WorkerThread(threading.Thread):
         port = self.queue.get(timeout=1)
       except Queue.Empty:
         print "Worker %d exiting. Scanned %d ports .." %(self.tid, total_ports)
-         return
+        return
       ip = self.target
       response = sr1(IP(src=self.source, dst=ip)/TCP(dport=port, flags="FPU"), verbose=False, timeout=.5)  #Our XMASScan uses flags Fin, Push, Urgent
       if response:
