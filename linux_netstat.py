@@ -9,8 +9,8 @@ import glob
 
 class netstat():
   def __init__(self):
-	self.PROC_TCP = "/proc/net/tcp"
-	self.STATE = {
+    self.PROC_TCP = "/proc/net/tcp"
+    self.STATE = {
       '01':'ESTABLISHED',
       '02':'SYN_SENT',
       '03':'SYN_RECV',
