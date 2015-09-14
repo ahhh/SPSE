@@ -73,11 +73,11 @@ def main():
   try:
     timeout = time.time() + 60*int(opts.timeout)   # 5 minutes from now
     max_number = 0  # max number of packets to capture counter
-	monitor = monitor_TCP()
+    monitor = monitor_TCP()
     while True:
 	  print monitor.listen_SYN()
 	  max_number = max_number + 1
-      if max_number == int(opts.number) or (opts.timeout != 0 and time.time() > timeout):
+      if max_number == int(opts.number) or (int(opts.timeout) != 0 and time.time() > timeout):
         break
 	
   except (KeyboardInterrupt, EOFError) as e:
