@@ -62,5 +62,4 @@ if __name__ == '__main__':
 	
   # Wait for all ports to be scanned
   queue.join()
-  
-  print "All tasks complete!
+  print "All tasks complete!"
