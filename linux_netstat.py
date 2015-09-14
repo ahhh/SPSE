@@ -77,4 +77,4 @@ def _get_pid_of_inode(inode):
 
 if __name__ == '__main__':
   for conn in netstat():
-    print conn
+    print(conn)
