@@ -5,8 +5,6 @@ import logging
 import time
 from optparse import OptionParser
 from urllib2 import HTTPError
-import Queue
-import threading
 
 start = time.time()
 
