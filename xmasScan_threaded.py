@@ -15,7 +15,6 @@ class WorkerThread(threading.Thread):
     self.tid = tid
     self.target = target
     self.source = source
-    print " XMASScan Worker %d Reporting for Duty!" %self.tid
 	
 
   def run(self):
@@ -29,6 +28,7 @@ class WorkerThread(threading.Thread):
         return
       ip = self.target
       response = sr1(IP(src=self.source, dst=ip)/TCP(dport=port, flags="FPU"), verbose=False, timeout=.5)  #Our XMASScan uses flags Fin, Push, Urgent
+      print "Scanning {0}:{1}".format(ip, port)
       if response:
         if (str(type(response)) == "<type 'NoneType'>"): # If no response then our port is open
           print "Port: {0} is {1}".format(port, "Open")
@@ -50,7 +50,6 @@ if __name__ == '__main__':
   port_range = port_range.split('-')
   
   for i in range(int(threads)):
-    print "Creating WorkerThread : %d"%i
     worker = WorkerThread(queue, i, target, source)
     worker.setDaemon(True)
     worker.start()
