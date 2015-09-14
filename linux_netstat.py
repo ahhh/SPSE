@@ -81,4 +81,5 @@ class netstat():
 
 if __name__ == '__main__':
   netstats = netstat()
-  print c for conn in netstats.list()
+  for conn in netstats.list():
+    print conn
