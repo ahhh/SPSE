@@ -51,7 +51,7 @@ if __name__ == '__main__':
   
   for i in range(int(threads)):
     print "Creating WorkerThread : %d"%i
-    worker = WorkerThread(queue, i, target)
+    worker = WorkerThread(queue, i, target, source)
     worker.setDaemon(True)
     worker.start()
     print "WorkerThread %d Created!"%i
