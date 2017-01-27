@@ -8,7 +8,7 @@ from collections import Counter
 texts = [('phish', ['malicious', 'update', 'download', 'phishing', 'email']),
         ('phish', ['run', 'click', 'install', 'FREE', '!!!']),
         ('phish', ['wire', 'transfer', 'urgent', 'money']),
-		('safe', ['results', 'repository', 'online']),
+	('safe', ['results', 'repository', 'online']),
         ('safe', ['conference', 'online', 'registration', 'conference']),
         ('safe', ['conference', 'results', 'repository'])]
 
