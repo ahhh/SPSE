@@ -67,19 +67,19 @@ def main():
   # Prompt if the user disn't give a url to upload
   if opts.api_endpoint is None:
     opts.api_endpoint = raw_input("What's the host of the Viper API endpoint? ")
-	# Example: opts.api_endpoint = 'viperhost:9002'
+    # Example: opts.api_endpoint = 'viperhost:9002'
 	
   results = "You need to upload a file (-f) or look up a hash (-m)"
   
   # Run upload if the user gave us a file to upload
   if opts.file_upload is not None:
     # Run our upload function	
-	results = uploadToViper(opts.user, opts.passw, opts.file_upload, opts.api_endpoint)
+    results = uploadToViper(opts.user, opts.passw, opts.file_upload, opts.api_endpoint)
 	
   #  Run Download if the user gave us a hash to get
   if opts.file_hash is not None:
-    # Run our upload function	
-	results = downloadFromViper(opts.user, opts.passw, opts.file_hash, opts.api_endpoint)
+    # Run our download function	
+    results = downloadFromViper(opts.user, opts.passw, opts.file_hash, opts.api_endpoint)
   
   for result in results:
     print result
